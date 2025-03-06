@@ -13,13 +13,15 @@ class AppColors {
   static const Color grey06 = Color(0xffD9DEE7);
   static const Color appColors = Color(0xffE02126);
   static const Color appColor = Color(0xff00C0B5);
-
+  static const Color appColor_01 = Color(0xffe4faf7);
 
 
 
 
 
   static const Color primary = Color(0xffFBB03B);
+  static const Color green = Color(0xff00b047);
+
 
 
 
