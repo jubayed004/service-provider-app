@@ -33,7 +33,7 @@ class CreateAccountScreen extends StatelessWidget {
                     child: CustomImage(
                   width: 185.w,
                   height: 185.h,
-                  imageSrc: AppImages.umImage,
+                  imageSrc: AppImages.iumi_image,
                 )),
                 SizedBox(
                   height: 40.h,
