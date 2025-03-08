@@ -54,7 +54,7 @@ class CustomTabSingleText extends StatelessWidget {
                     color: selectedIndex == index
                         ? selectedColor
                         : Colors.transparent,
-                    width: 3.0,
+                    width: 1.0,
                   ),
                 ),
               ),

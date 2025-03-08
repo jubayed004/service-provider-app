@@ -42,4 +42,19 @@ class AppImages {
   static const String home = "$basePath/home.png";
 
 
+
+
+
+
+
+
+
+  static const String profile_black_tshirt = "$basePath/profile_black_tshirt.png";
+
+
+
+
+
+
+
 }

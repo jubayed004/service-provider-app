@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:service_provider_app/core/app_routes/app_routes.dart';
 import 'package:service_provider_app/core/components/custom_elevated_button/custom_elevated_button.dart';
@@ -11,7 +12,7 @@ import 'package:service_provider_app/core/utils/app_icons/app_icons.dart';
 import 'package:service_provider_app/core/utils/app_images/app_images.dart';
 import 'package:service_provider_app/core/utils/app_strings/app_strings.dart';
 import 'package:circle_list/circle_list.dart';
-import 'package:get/get.dart';
+
 
 class HomeUserScreen extends StatefulWidget {
   const HomeUserScreen({super.key});

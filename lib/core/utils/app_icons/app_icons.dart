@@ -16,6 +16,23 @@ class AppIcons {
   ///=========================Home User screen ======================///
 
   static const String calander = "$basePath/calander.svg";
+  static const String house = "$basePath/house.svg";
+  static const String childen = "$basePath/childen.svg";
+  static const String old_man = "$basePath/old_man.svg";
+  static const String cleaning = "$basePath/cleaning.svg";
+  static const String pets = "$basePath/pets.svg";
+  static const String others = "$basePath/others.svg";
+  static const String handyman = "$basePath/handyman.svg";
+  static const String care = "$basePath/care.svg";
+
+
+  ///=========================Inbox User Alerts  ======================///
+
+  static const String oder_accepted = "$basePath/oder_accepted.svg";
+  static const String order_complete = "$basePath/order_complete.svg";
+  static const String cancel_order = "$basePath/cancel_order.svg";
+  static const String woman = "$basePath/woman.svg";
+
 
 
 

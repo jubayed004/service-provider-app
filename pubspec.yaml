@@ -71,6 +71,7 @@ dev_dependencies:
   geolocator: ^13.0.2
   oktoast: ^3.4.0
   persistent_bottom_nav_bar: ^6.2.1
+  circle_list: ^1.0.2
 
 
 

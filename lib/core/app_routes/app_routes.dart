@@ -1,6 +1,7 @@
 
 import 'package:get/get.dart';
 import 'package:service_provider_app/core/features/auth/create_account/create_account_screen.dart';
+import 'package:service_provider_app/core/features/booking/booking_time_screen.dart';
 import 'package:service_provider_app/core/features/home_user/home_user_care_screen.dart';
 import 'package:service_provider_app/core/features/home_user/home_user_screen.dart';
 import 'package:service_provider_app/core/features/search/search_screen.dart';
@@ -13,6 +14,7 @@ class AppRoutes {
   static const String homeUserScreen = "/HomeUserScreen";
   static const String homeUserCareScreen = "/HomeUserCareScreen";
   static const String searchScreen = "/SearchScreen";
+  static const String bookingTimeScreen = "/BookingTimeScreen";
 
 
 static List<GetPage> routes = [
@@ -24,6 +26,7 @@ static List<GetPage> routes = [
   GetPage(name: homeUserScreen, page: () => HomeUserScreen()),
   GetPage(name: homeUserCareScreen, page: () => HomeUserCareScreen()),
   GetPage(name: searchScreen, page: () => SearchScreen()),
+  GetPage(name: bookingTimeScreen, page: () => BookingTimeScreen()),
 
 
 ];

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:service_provider_app/core/app_routes/app_routes.dart';
 import 'package:service_provider_app/core/components/custom_image/custom_image.dart';
 import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
+import 'package:service_provider_app/core/features/inbox/inbox_screen.dart';
 import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
 import 'package:service_provider_app/core/utils/app_icons/app_icons.dart';
 import 'package:service_provider_app/core/utils/app_images/app_images.dart';
@@ -151,7 +152,7 @@ class _UserNavBarState extends State<BlackDaimonNavbar> {
         // Get.to(() => FavouriteScreen());
           break;
         case 2:
-        // Get.to(() => InboxScreen());
+        Get.to(() => InboxScreen());
           break;
         case 3:
         // Get.to(() => ProfileScreen());

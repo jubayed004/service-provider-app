@@ -77,12 +77,31 @@ class   AppStrings {
   static const String massageTherapy  = "Massage Therapy";
   static const String tutoringLessons  = "Tutoring Lessons";
   static const String personalTrainer  = "Personal Trainer";
+  ///========================= Inbox User  ======================///
+  static const String weHaveAccepted   = "We have accepted your order.\n Click to view details.";
+  static const String orderAccepted   = "Order Accepted";
+  static const String orderComplete   = "Order Complete";
+  static const String cancelOrder   = "Cancel order";
+  static const String twoHrs   = "2 hrs ago";
+///========================= Booking Time Screen ======================///
 
-
-
-
-
-
+  static const String whenDoYou   = "When do you need it?";
+  static const String frequency   = "Frequency";
+  static const String oneTime   = "One-Time";
+  static const String justOnce   = "Just once";
+  static const String weekly   = "Weekly";
+  static const String recurring   = "Recurring";
+  static const String january   = "January";
+  static const String showMonth   = "Show month";
+  static const String duration    = "Duration 2h";
+  static const String startTime   = "Start time";
+  static const String flexibleStart   = "Flexible start";
+  static const String exactStart   = "Exact start";
+  static const String morning   = "Morning";
+  static const String evening   = "Evening";
+  static const String skip   = "Skip";
+  static const String search   = "Search";
+  static const String dayOfTheWeek   = "Day(s) of the week";
 
 
 
