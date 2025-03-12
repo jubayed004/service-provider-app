@@ -4,7 +4,6 @@ import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
 import 'package:service_provider_app/core/utils/app_strings/app_strings.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 class BookingTimeScreen extends StatelessWidget {
   const BookingTimeScreen({super.key});
 
