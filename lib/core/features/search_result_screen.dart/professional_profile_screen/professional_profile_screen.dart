@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:service_provider_app/core/components/custom_image/custom_image.dart';
 import 'package:service_provider_app/core/components/custom_netwrok_image/custom_network_image.dart';
 import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
 import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
 import 'package:service_provider_app/core/utils/app_const/app_const.dart';
+import 'package:service_provider_app/core/utils/app_images/app_images.dart';
 
 import '../inner_widget.dart/custom_review_row.dart';
 
@@ -79,14 +81,14 @@ class ProfessionalProfileScreen extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(15),
                     decoration: BoxDecoration(
-                      color: AppColors.fullWhite,
+                      color: AppColors.white,
                       borderRadius: BorderRadius.circular(10.r),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CustomImage(
-                          imageSrc: AppImages.chatIcon,
+                          imageSrc: AppImages.chat,
                           height: 44.h,
                           width: 44.w,
                         ),
