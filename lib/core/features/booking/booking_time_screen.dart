@@ -17,6 +17,7 @@ class BookingTimeScreen extends StatelessWidget {
         leading: GestureDetector(
           onTap: (){
             Get.back();
+
           },
             child: Icon(Icons.arrow_back)),
       ),
