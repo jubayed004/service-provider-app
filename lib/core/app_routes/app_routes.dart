@@ -1,8 +1,8 @@
 
 import 'package:get/get.dart';
 import 'package:service_provider_app/core/features/auth/create_account/create_account_screen.dart';
-import 'package:service_provider_app/core/features/booking/booking_time_screen.dart';
-import 'package:service_provider_app/core/features/home_user/home_user_care_screen.dart';
+import 'package:service_provider_app/core/features/home_user/booking/booking_time_screen.dart';
+import 'package:service_provider_app/core/features/home_user/home_user_care/home_user_care_screen.dart';
 import 'package:service_provider_app/core/features/home_user/home_user_screen.dart';
 import 'package:service_provider_app/core/features/search/search_screen.dart';
 import 'package:service_provider_app/core/features/splash/splash_screen.dart';

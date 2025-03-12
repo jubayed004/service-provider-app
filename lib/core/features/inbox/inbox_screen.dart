@@ -27,17 +27,17 @@ class InboxScreen extends StatelessWidget {
         scrolledUnderElevation: 0,
         automaticallyImplyLeading: false,
         title: Obx(() => CustomText(
-          text:
-          tabbarController.currentIndex.value == 0 ? "Inbox" : "Alerts",
-          fontWeight: FontWeight.w600,
-          fontSize: 32,
-        )),
+              text:
+                  tabbarController.currentIndex.value == 0 ? "Inbox" : "Alerts",
+              fontWeight: FontWeight.w600,
+              fontSize: 32,
+            )),
       ),
       body: Obx(() {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Fixed CustomTabSingleText at the top
+            ///=================== Fixed CustomTabSingleText at the top
             CustomTabSingleText(
               tabs: tabbarController.nameList,
               selectedIndex: tabbarController.currentIndex.value,
@@ -52,7 +52,8 @@ class InboxScreen extends StatelessWidget {
             ///=============================== Fixed CustomTextField below the CustomTabSingleText
             if (tabbarController.currentIndex.value == 0)
               Padding(
-                padding: EdgeInsets.only(top: 24, left: 20, right: 20, bottom: 24),
+                padding:
+                    EdgeInsets.only(top: 24, left: 20, right: 20, bottom: 24),
                 child: CustomTextField(
                   isDens: true,
                   suffixIcon: Icon(Icons.search),
@@ -63,7 +64,6 @@ class InboxScreen extends StatelessWidget {
             ///======================= Scrollable content below the CustomTextField
             Expanded(
               child: SingleChildScrollView(
-                padding: EdgeInsets.symmetric(vertical: 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -71,7 +71,8 @@ class InboxScreen extends StatelessWidget {
                       ListView.builder(
                         scrollDirection: Axis.vertical,
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(), // Disable inner scrolling
+                        physics:
+                            NeverScrollableScrollPhysics(), // Disable inner scrolling
                         itemCount: 9,
                         itemBuilder: (BuildContext context, int index) {
                           return Card(
@@ -79,9 +80,11 @@ class InboxScreen extends StatelessWidget {
                             color: AppColors.neutral_01,
                             elevation: 0,
                             child: Padding(
-                              padding: const EdgeInsets.only(top: 10, bottom: 10),
+                              padding:
+                                  const EdgeInsets.only(top: 10, bottom: 10),
                               child: ListTile(
-                                leading: CustomImage(imageSrc: AppImages.profile_black_tshirt),
+                                leading: CustomImage(
+                                    imageSrc: AppImages.profile_black_tshirt),
                                 title: CustomText(
                                   text: 'Admin Maria',
                                   fontWeight: FontWeight.w600,
@@ -109,7 +112,7 @@ class InboxScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 24.0),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
                           children: [
                             Card(
                                 elevation: 0,
@@ -118,23 +121,48 @@ class InboxScreen extends StatelessWidget {
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      CustomImage(imageSrc: AppIcons.oder_accepted),
+                                      CustomImage(
+                                          imageSrc: AppIcons.oder_accepted),
                                       Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          CustomText(text: AppStrings.orderAccepted, left: 10.w, fontSize: 16.sp, fontWeight: FontWeight.w500,),
-                                          CustomText(text: AppStrings.weHaveAccepted, maxLines: 3, left: 10.w, right: 12.w, fontSize: 14.sp, fontWeight: FontWeight.w400, color: AppColors.neutral_03,),
+                                          CustomText(
+                                            text: AppStrings.orderAccepted,
+                                            left: 10.w,
+                                            fontSize: 16.sp,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                          CustomText(
+                                            text: AppStrings.weHaveAccepted,
+                                            maxLines: 3,
+                                            left: 10.w,
+                                            right: 12.w,
+                                            fontSize: 14.sp,
+                                            fontWeight: FontWeight.w400,
+                                            color: AppColors.neutral_03,
+                                            textAlign: TextAlign.start,
+                                          ),
                                         ],
                                       ),
-                                      Icon(Icons.access_time_rounded, size: 16,),
-                                      CustomText(text: AppStrings.twoHrs, fontSize: 16.sp, fontWeight: FontWeight.w400, left: 4,)
+                                      Icon(
+                                        Icons.access_time_rounded,
+                                        size: 16,
+                                      ),
+                                      CustomText(
+                                        text: AppStrings.twoHrs,
+                                        fontSize: 16.sp,
+                                        fontWeight: FontWeight.w400,
+                                        left: 4,
+                                      )
                                     ],
                                   ),
-                                )
-                            ),
+                                )),
                             Card(
                                 elevation: 0,
                                 shape: Border(top: BorderSide.none),
@@ -142,23 +170,48 @@ class InboxScreen extends StatelessWidget {
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      CustomImage(imageSrc: AppIcons.order_complete),
+                                      CustomImage(
+                                          imageSrc: AppIcons.order_complete),
                                       Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          CustomText(text: AppStrings.orderComplete, left: 10.w, fontSize: 16.sp, fontWeight: FontWeight.w500,),
-                                          CustomText(text: AppStrings.weHaveAccepted, maxLines: 3, left: 10.w, right: 12.w, fontSize: 14.sp, fontWeight: FontWeight.w400, color: AppColors.neutral_03,),
+                                          CustomText(
+                                            text: AppStrings.orderComplete,
+                                            left: 10.w,
+                                            fontSize: 16.sp,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                          CustomText(
+                                            text: AppStrings.weHaveAccepted,
+                                            maxLines: 3,
+                                            left: 10.w,
+                                            right: 12.w,
+                                            fontSize: 14.sp,
+                                            fontWeight: FontWeight.w400,
+                                            color: AppColors.neutral_03,
+                                            textAlign: TextAlign.start,
+                                          ),
                                         ],
                                       ),
-                                      Icon(Icons.access_time_rounded, size: 16,),
-                                      CustomText(text: AppStrings.twoHrs, fontSize: 16.sp, fontWeight: FontWeight.w400, left: 4,)
+                                      Icon(
+                                        Icons.access_time_rounded,
+                                        size: 16,
+                                      ),
+                                      CustomText(
+                                        text: AppStrings.twoHrs,
+                                        fontSize: 16.sp,
+                                        fontWeight: FontWeight.w400,
+                                        left: 4,
+                                      )
                                     ],
                                   ),
-                                )
-                            ),
+                                )),
                             Card(
                                 elevation: 0,
                                 shape: Border(top: BorderSide.none),
@@ -166,23 +219,48 @@ class InboxScreen extends StatelessWidget {
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      CustomImage(imageSrc: AppIcons.cancel_order),
+                                      CustomImage(
+                                          imageSrc: AppIcons.cancel_order),
                                       Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          CustomText(text: AppStrings.cancelOrder, left: 10.w, fontSize: 16.sp, fontWeight: FontWeight.w500,),
-                                          CustomText(text: AppStrings.weHaveAccepted, maxLines: 3, left: 10.w, right: 12.w, fontSize: 14.sp, fontWeight: FontWeight.w400, color: AppColors.neutral_03,),
+                                          CustomText(
+                                            text: AppStrings.cancelOrder,
+                                            left: 10.w,
+                                            fontSize: 16.sp,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                          CustomText(
+                                            text: AppStrings.weHaveAccepted,
+                                            maxLines: 3,
+                                            left: 10.w,
+                                            right: 12.w,
+                                            fontSize: 14.sp,
+                                            fontWeight: FontWeight.w400,
+                                            color: AppColors.neutral_03,
+                                            textAlign: TextAlign.start,
+                                          ),
                                         ],
                                       ),
-                                      Icon(Icons.access_time_rounded, size: 16,),
-                                      CustomText(text: AppStrings.twoHrs, fontSize: 16.sp, fontWeight: FontWeight.w400, left: 4,)
+                                      Icon(
+                                        Icons.access_time_rounded,
+                                        size: 16,
+                                      ),
+                                      CustomText(
+                                        text: AppStrings.twoHrs,
+                                        fontSize: 16.sp,
+                                        fontWeight: FontWeight.w400,
+                                        left: 4,
+                                      )
                                     ],
                                   ),
-                                )
-                            ),
+                                )),
                           ],
                         ),
                       ),

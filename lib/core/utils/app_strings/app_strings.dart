@@ -93,7 +93,7 @@ class   AppStrings {
   static const String recurring   = "Recurring";
   static const String january   = "January";
   static const String showMonth   = "Show month";
-  static const String duration    = "Duration 2h";
+  static const String duration    = "Duration";
   static const String startTime   = "Start time";
   static const String flexibleStart   = "Flexible start";
   static const String exactStart   = "Exact start";

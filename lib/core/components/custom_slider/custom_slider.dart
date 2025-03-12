@@ -45,7 +45,7 @@ class _CustomSliderState extends State<CustomSlider> {
           decoration: BoxDecoration(
             color: widget.currentValue == null || widget.currentValue == 0
                 ? AppColors.white
-                : AppColors.appColors,
+                : AppColors.appColor,
             borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(10), topLeft: Radius.circular(10)),
           ),
