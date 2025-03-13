@@ -40,6 +40,9 @@ class AppImages {
   static const String chat = "$basePath/chat.png";
   static const String user = "$basePath/user.png";
   static const String home = "$basePath/home.png";
+  static const String icon = "$basePath/Icon.png";
+  static const String check = "$basePath/check.png";
+  static const String massages = "$basePath/massages.png";
 
 
 
@@ -49,7 +52,7 @@ class AppImages {
 
 
 
-  static const String profile_black_tshirt = "$basePath/profile_black_tshirt.png";
+  static const String profileBlack= "$basePath/profile_black_tshirt.png";
 
 
 

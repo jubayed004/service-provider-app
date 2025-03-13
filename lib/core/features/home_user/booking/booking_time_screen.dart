@@ -354,7 +354,7 @@ class _BookingTimeScreenState extends State<BookingTimeScreen> {
                                     onPressed: () {
                                       // Handle Skip action
 
-                                      // Get.toNamed(AppRoutes.searchResultScreen);
+                                      Get.toNamed(AppRoutes.searchResultScreen);
                                     },
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: AppColors.primary,

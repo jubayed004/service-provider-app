@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:service_provider_app/core/components/custom_image/custom_image.dart';
+import 'package:service_provider_app/core/components/custom_netwrok_image/custom_network_image.dart';
+import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
+import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
+import 'package:service_provider_app/core/utils/app_const/app_const.dart';
+import 'package:service_provider_app/core/utils/app_images/app_images.dart';
 import '../../../../../../core/app_routes/app_routes.dart';
-import '../../../../../../utils/app_colors/app_colors.dart';
-import '../../../../../../utils/app_const/app_const.dart';
-import '../../../../../../utils/app_images/app_images.dart';
-import '../../../../../components/custom_image/custom_image.dart';
-import '../../../../../components/custom_netwrok_image/custom_network_image.dart';
-import '../../../../../components/custom_text/custom_text.dart';
+
 class CustomSearchContainer extends StatelessWidget {
   const CustomSearchContainer({super.key});
 
@@ -22,7 +23,7 @@ class CustomSearchContainer extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.all(12.w),
           decoration: BoxDecoration(
-              color: AppColors.fullWhite,
+              color: AppColors.white,
               borderRadius: BorderRadius.circular(10.r),
               boxShadow: [
                 BoxShadow(
@@ -49,12 +50,12 @@ class CustomSearchContainer extends StatelessWidget {
                             boxShape: BoxShape.circle,
                           ),
                           Positioned(
-                              bottom: -20,
+                              bottom: -15,
                               right: -20,
                               child: IconButton(
                                 onPressed: () {},
                                 icon: Icon(Icons.favorite,
-                                  color: AppColors.red,
+                                  color: Colors.red
                                 ),
                               )
                           ),
@@ -66,8 +67,8 @@ class CustomSearchContainer extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              CustomText(text: "Mehedi Hasan", fontSize: 16.w, fontWeight: FontWeight.w500,),
-                              CustomImage(imageSrc: AppImages.badgeCheck,),
+                              CustomText(text: "Jubayed islam", fontSize: 16.w, fontWeight: FontWeight.w500,),
+                              CustomImage(imageSrc: AppImages.check,sizeWidth: 18.w,),
                             ],
                           ),
                           Row(
@@ -89,7 +90,7 @@ class CustomSearchContainer extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 10,vertical: 8),
                     decoration: BoxDecoration(
-                      color: AppColors.primary3,
+                      color: AppColors.appColor_01,
                       borderRadius: BorderRadius.circular(7.r),
                     ),
                     child: Row(
@@ -103,7 +104,7 @@ class CustomSearchContainer extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 10,vertical: 8),
                     decoration: BoxDecoration(
-                      color: AppColors.primary3,
+                      color: AppColors.appColor_01,
                       borderRadius: BorderRadius.circular(7.r),
                     ),
                     child: Row(

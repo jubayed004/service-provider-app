@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:service_provider/utils/app_colors/app_colors.dart';
-import 'package:service_provider/utils/app_const/app_const.dart';
-import 'package:service_provider/views/components/custom_button/custom_button.dart';
-import 'package:service_provider/views/components/custom_netwrok_image/custom_network_image.dart';
-import 'package:service_provider/views/components/custom_royel_appbar/custom_royel_appbar.dart';
-import 'package:service_provider/views/components/custom_text/custom_text.dart';
-import 'package:service_provider/views/components/custom_text_field/custom_text_field.dart';
+import 'package:service_provider_app/core/components/custom_button/custom_button.dart';
+import 'package:service_provider_app/core/components/custom_netwrok_image/custom_network_image.dart';
+import 'package:service_provider_app/core/components/custom_royel_appbar/custom_royel_appbar.dart';
+import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
+import 'package:service_provider_app/core/components/custom_text_field/custom_text_field.dart';
+import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
+import 'package:service_provider_app/core/utils/app_const/app_const.dart';
+
 
 class ConfirmPayScreen extends StatelessWidget {
   const ConfirmPayScreen({super.key});
@@ -63,7 +64,7 @@ class ConfirmPayScreen extends StatelessWidget {
               ),
               Divider(
                 thickness: 1,
-                color: AppColors.textColor,
+                color: AppColors.white,
               ),
               CustomText(
                 text: "How does it work?",
@@ -95,7 +96,7 @@ class ConfirmPayScreen extends StatelessWidget {
                     text: "Date and time",
                     fontSize: 16.w,
                     fontWeight: FontWeight.w500,
-                    color: AppColors.primary2,
+                    color: AppColors.appColor_01,
                   ),
                   CustomText(
                     text: "Edit",
@@ -112,13 +113,13 @@ class ConfirmPayScreen extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.calendar_month,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                   CustomText(
                     text: "Monday, January 13",
                     fontSize: 12.w,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                     left: 8.w,
                   ),
                 ],
@@ -130,13 +131,13 @@ class ConfirmPayScreen extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.circle,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                   CustomText(
                     text: "Start : 10:30 PM",
                     fontSize: 12.w,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                     left: 8.w,
                   ),
                 ],
@@ -154,7 +155,7 @@ class ConfirmPayScreen extends StatelessWidget {
                     text: "End : 10:30 PM",
                     fontSize: 12.w,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                     left: 8.w,
                   ),
                 ],
@@ -172,7 +173,7 @@ class ConfirmPayScreen extends StatelessWidget {
                     text: "(Duration: 2h)",
                     fontSize: 12.w,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                     left: 8.w,
                   ),
                 ],
@@ -187,7 +188,7 @@ class ConfirmPayScreen extends StatelessWidget {
                     text: "Address",
                     fontSize: 16.w,
                     fontWeight: FontWeight.w500,
-                    color: AppColors.primary2,
+                    color: AppColors.appColor_01,
                   ),
                   CustomText(
                     text: "Change",
@@ -210,7 +211,7 @@ class ConfirmPayScreen extends StatelessWidget {
                     text: "Tallapoosa county, east-central Alabama, U.S",
                     fontSize: 14.w,
                     fontWeight: FontWeight.w500,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                 ],
               ),
@@ -218,7 +219,7 @@ class ConfirmPayScreen extends StatelessWidget {
                 text: "Service price",
                 fontSize: 18.w,
                 fontWeight: FontWeight.w500,
-                color: AppColors.primary2,
+                color: AppColors.appColor_01,
                 top: 10.h,
                 bottom: 12.h,
               ),
@@ -257,7 +258,7 @@ class ConfirmPayScreen extends StatelessWidget {
               ),
               Divider(
                 thickness: 1,
-                color: AppColors.textColor,
+                color: AppColors.black,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -266,13 +267,13 @@ class ConfirmPayScreen extends StatelessWidget {
                     text: "Subtotal",
                     fontWeight: FontWeight.w400,
                     fontSize: 12.w,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                   CustomText(
                     text: "\$20.00",
                     fontWeight: FontWeight.w400,
                     fontSize: 12.w,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                 ],
               ),
@@ -286,13 +287,13 @@ class ConfirmPayScreen extends StatelessWidget {
                     text: "Client protection",
                     fontWeight: FontWeight.w400,
                     fontSize: 12.w,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                   CustomText(
                     text: "Free",
                     fontWeight: FontWeight.w400,
                     fontSize: 12.w,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                 ],
               ),
@@ -321,9 +322,9 @@ class ConfirmPayScreen extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
-                    color: AppColors.fullWhite,
+                    color: AppColors.white,
                     borderRadius: BorderRadius.circular(10),
-                    boxShadow: [BoxShadow(color: AppColors.textColor)]),
+                    boxShadow: [BoxShadow(color: AppColors.black)]),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -371,7 +372,7 @@ class ConfirmPayScreen extends StatelessWidget {
                 title: "Add payment method",
                 isBorder: true,
                 fillColor: AppColors.white,
-                textColor: AppColors.textColor,
+                // black: AppColors.black,
                 borderWidth: 1,
               ),
               SizedBox(
@@ -381,13 +382,13 @@ class ConfirmPayScreen extends StatelessWidget {
                 text: "Remember that....",
                 fontSize: 16.w,
                 fontWeight: FontWeight.w500,
-                color: AppColors.primary2,
+                color: AppColors.appColor_01,
               ),
               CustomText(
                 text: "Please, if you have any special requirements for the service, include them  in the message you can add to your booking. This way, the professional can take them into...",
                 fontSize: 12.w,
                 fontWeight: FontWeight.w400,
-                color: AppColors.textColor,
+                color: AppColors.black,
                 maxLines: 3,
                 textAlign: TextAlign.start,
               ),
@@ -396,13 +397,13 @@ class ConfirmPayScreen extends StatelessWidget {
                 text: "Additional comments",
                 fontSize: 16.w,
                 fontWeight: FontWeight.w500,
-                color: AppColors.primary2,
+                color: AppColors.appColor_01,
               ),
               CustomText(
                 text: "Feel free to include any additional details if needed (please avoid contact details)",
                 fontSize: 12.w,
                 fontWeight: FontWeight.w400,
-                color: AppColors.textColor,
+                color: AppColors.black,
                 maxLines: 3,
                 textAlign: TextAlign.start,
               ),
@@ -410,20 +411,20 @@ class ConfirmPayScreen extends StatelessWidget {
               CustomTextField(
                 maxLines: 3,
                 hintText: "hi... ",
-                fillColor: AppColors.fullWhite,
+                fillColor: AppColors.white,
               ),
               CustomText(
                 top: 20.h,
                 text: "Cancellation policy",
                 fontSize: 16.w,
                 fontWeight: FontWeight.w500,
-                color: AppColors.primary2,
+                color: AppColors.appColor_01,
               ),
               CustomText(
                 text: "Feel free to include any additional details if needed (please avoid contact details)",
                 fontSize: 12.w,
                 fontWeight: FontWeight.w400,
-                color: AppColors.textColor,
+                color: AppColors.black,
                 maxLines: 3,
                 textAlign: TextAlign.start,
               ),

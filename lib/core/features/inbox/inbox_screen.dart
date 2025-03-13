@@ -84,7 +84,7 @@ class InboxScreen extends StatelessWidget {
                                   const EdgeInsets.only(top: 10, bottom: 10),
                               child: ListTile(
                                 leading: CustomImage(
-                                    imageSrc: AppImages.profile_black_tshirt),
+                                    imageSrc: AppImages.profileBlack),
                                 title: CustomText(
                                   text: 'Admin Maria',
                                   fontWeight: FontWeight.w600,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:service_provider/views/components/custom_text/custom_text.dart';
+import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
+import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
 
-import '../../../../../../utils/app_colors/app_colors.dart';
-import '../inner_widget.dart/custom_checkbox_text.dart';
+import 'inner_widgets/custom_checkbox_text.dart';
 
 class PalliativeCareScreen extends StatelessWidget {
   const PalliativeCareScreen({super.key});
@@ -68,11 +68,11 @@ class PalliativeCareScreen extends StatelessWidget {
                       "Only show professionals specialising in palliative care",
                   fontSize: 16.w,
                   fontWeight: FontWeight.w400,
-                  color: AppColors.textColor,
+                  color: AppColors.black,
                   maxLines: 2,
                   textAlign: TextAlign.start,
                 ),
-                Divider(thickness: 1,color: AppColors.textColor,),
+                Divider(thickness: 1,color: AppColors.black,),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: CustomText(
@@ -89,7 +89,7 @@ class PalliativeCareScreen extends StatelessWidget {
                    return CustomCheckboxText();
                  }),
                ),
-                Divider(thickness: 1,color: AppColors.textColor,),
+                Divider(thickness: 1,color: AppColors.black,),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: CustomText(

@@ -15,6 +15,7 @@ class SearchResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white_50,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.h),
         child: Column(
@@ -23,7 +24,7 @@ class SearchResultScreen extends StatelessWidget {
             SizedBox(
               height: 40.h,
             ),
-            ////============== AppBar ==========
+            ///============== AppBar ==========///
             Row(
               children: [
                 Expanded(
@@ -92,7 +93,7 @@ class SearchResultScreen extends StatelessWidget {
                 SizedBox(width: 16.w,),
                 GestureDetector(
                   onTap: (){
-                    // Get.toNamed(AppRoutes.palliativeCareScreen);
+                    Get.toNamed(AppRoutes.palliativeCareScreen);
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(horizontal: 10,vertical: 8),
@@ -119,8 +120,9 @@ class SearchResultScreen extends StatelessWidget {
                 Row(
                   children: [
                     CustomImage(
-                      imageSrc: AppImages.calender_two,
+                      imageSrc: AppImages.icon,
                       imageColor: AppColors.primary,
+                      sizeWidth: 18.w,
                     ),
                     CustomText(
                       text: "How does the service work?",

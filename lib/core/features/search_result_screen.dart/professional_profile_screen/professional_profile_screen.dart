@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:service_provider_app/core/components/custom_button/custom_button.dart';
 import 'package:service_provider_app/core/components/custom_image/custom_image.dart';
 import 'package:service_provider_app/core/components/custom_netwrok_image/custom_network_image.dart';
 import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
@@ -8,7 +9,7 @@ import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
 import 'package:service_provider_app/core/utils/app_const/app_const.dart';
 import 'package:service_provider_app/core/utils/app_images/app_images.dart';
 
-import '../inner_widget.dart/custom_review_row.dart';
+import 'inner_widgets/custom_review_row.dart';
 
 class ProfessionalProfileScreen extends StatelessWidget {
   const ProfessionalProfileScreen({super.key});
@@ -16,6 +17,7 @@ class ProfessionalProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white_50,
       body: Padding(
         padding: const EdgeInsets.only(top: 60),
         child: Column(
@@ -58,10 +60,11 @@ class ProfessionalProfileScreen extends StatelessWidget {
                 padding: EdgeInsets.zero,
                 children: [
                   CustomNetworkImage(
-                    imageUrl: AppConstants.profileImage,
+                    imageUrl: AppConstants.girlsPhoto,
                     height: 90.h,
                     width: 90.w,
                     boxShape: BoxShape.circle,
+                    
                   ),
                   CustomText(
                     text: "John Doe",
@@ -77,25 +80,26 @@ class ProfessionalProfileScreen extends StatelessWidget {
                     color: AppColors.black,
                     bottom: 20.h,
                   ),
-                  //==================== Container =====================
+                  ///==================== Container =====================
                   Container(
                     padding: EdgeInsets.all(15),
                     decoration: BoxDecoration(
-                      color: AppColors.white,
+                      color: AppColors.white_50,
                       borderRadius: BorderRadius.circular(10.r),
+                      border: Border.all(width: 1,color: AppColors.black)
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CustomImage(
-                          imageSrc: AppImages.chat,
+                          imageSrc: AppImages.massages,
                           height: 44.h,
                           width: 44.w,
                         ),
                         Container(
                           height: 44.h,
                           width: 1.w,
-                          color: AppColors.textColor,
+                          color: AppColors.black,
                         ),
                         Column(
                           children: [
@@ -118,13 +122,14 @@ class ProfessionalProfileScreen extends StatelessWidget {
                               fontSize: 12.w,
                               fontWeight: FontWeight.w400,
                               color: AppColors.black,
+
                             ),
                           ],
                         ),
                         Container(
                           height: 44.h,
                           width: 1.w,
-                          color: AppColors.textColor,
+                          color: AppColors.black,
                         ),
                         Column(
                           children: [
@@ -145,10 +150,11 @@ class ProfessionalProfileScreen extends StatelessWidget {
                         Container(
                           height: 44.h,
                           width: 1.w,
-                          color: AppColors.textColor,
+                          color: AppColors.black,
+
                         ),
                         CustomImage(
-                          imageSrc: AppImages.verifai,
+                          imageSrc: AppImages.check,
                           height: 44.h,
                           width: 44.w,
                         )
@@ -170,7 +176,7 @@ class ProfessionalProfileScreen extends StatelessWidget {
                         "Welcome to NB Sujon, where quality meets convenience! With a passion for excellence and a commitment to customer satisfaction, we specialize in delivering top-notch service.",
                     fontSize: 12.w,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                     maxLines: 4,
                     textAlign: TextAlign.start,
                   ),
@@ -186,7 +192,7 @@ class ProfessionalProfileScreen extends StatelessWidget {
                           ))),
                   Divider(
                     thickness: 1,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -205,8 +211,9 @@ class ProfessionalProfileScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  SizedBox(height: 12.h,),
                   Row(
-                    children: List.generate(2, (v) {
+                    children: List.generate(3, (v) {
                       return CustomNetworkImage(
                         imageUrl: AppConstants.girlsPhoto,
                         height: 110.h,
@@ -215,15 +222,16 @@ class ProfessionalProfileScreen extends StatelessWidget {
                       );
                     }),
                   ),
+                  SizedBox(height: 12,),
                   Divider(
                     thickness: 1,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                   CustomText(
                     text: "Some question about me",
                     fontSize: 16.w,
                     fontWeight: FontWeight.w500,
-                    color: AppColors.primary2,
+                    color: AppColors.loginColor,
                     textAlign: TextAlign.start,
                   ),
                   CustomText(
@@ -231,7 +239,7 @@ class ProfessionalProfileScreen extends StatelessWidget {
                         "How much experience do you have as a carer of the elderly?",
                     fontSize: 16.w,
                     fontWeight: FontWeight.w500,
-                    color: AppColors.primary2,
+                    color: AppColors.loginColor,
                     maxLines: 2,
                     textAlign: TextAlign.start,
                   ),
@@ -239,7 +247,7 @@ class ProfessionalProfileScreen extends StatelessWidget {
                     text: "6-10 years of experince",
                     fontSize: 12.w,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.primary2,
+                    color: AppColors.loginColor,
                     textAlign: TextAlign.start,
                   ),
                   CustomText(
@@ -247,7 +255,7 @@ class ProfessionalProfileScreen extends StatelessWidget {
                         "Do you have a qualification, diploma or degree as a health worker?",
                     fontSize: 16.w,
                     fontWeight: FontWeight.w500,
-                    color: AppColors.primary2,
+                    color: AppColors.loginColor,
                     maxLines: 2,
                     textAlign: TextAlign.start,
                   ),
@@ -255,7 +263,7 @@ class ProfessionalProfileScreen extends StatelessWidget {
                     text: "No",
                     fontSize: 12.w,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.primary2,
+                    color: AppColors.loginColor,
                     textAlign: TextAlign.start,
                     bottom: 20.h,
                   ),
@@ -264,12 +272,15 @@ class ProfessionalProfileScreen extends StatelessWidget {
                     title: "View all",
                     fillColor: AppColors.white_50,
                     isBorder: true,
-                    textColor: AppColors.textColor,
+                    textColor: AppColors.black,
+
+
+                    // black: AppColors.black,
                   ),
                   SizedBox(height: 20.h,),
                   Divider(
                     thickness: 1,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                   Row(
                     children: [
@@ -310,13 +321,13 @@ class ProfessionalProfileScreen extends StatelessWidget {
                   CustomReviewRow(),
                   Divider(
                     thickness: 1,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                   CustomText(
                     text: "Comments",
                     fontSize: 20.w,
                     fontWeight: FontWeight.w600,
-                    color: AppColors.primary2,
+                    color: AppColors.loginColor,
                     bottom: 20.h,
                   ),
                   Row(
@@ -329,13 +340,14 @@ class ProfessionalProfileScreen extends StatelessWidget {
                           Row(
                             children: [
                               CustomText(
-                                text: "Sujon",
+                                text: "Terek bhai",
                                 fontSize: 16.w,
                                 fontWeight: FontWeight.w500,
                                 color: AppColors.black,
                               ),
                               CustomText(
-                                text: "1 day ago",
+                                left: 06,
+                                text: ".1 day ago",
                                 fontSize: 12.w,
                                 fontWeight: FontWeight.w400,
                                 color: AppColors.black,
@@ -344,8 +356,8 @@ class ProfessionalProfileScreen extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              Icon(Icons.verified,size: 15,color: AppColors.textColor,),
-                              CustomText(text: "Verified",fontSize: 12.w,fontWeight: FontWeight.w400,color: AppColors.textColor,),
+                              Icon(Icons.verified,size: 15,),
+                              CustomText(text: "Verified service",fontSize: 12.w,fontWeight: FontWeight.w400,color: AppColors.black,),
                             ],
                           )
                         ],
@@ -356,7 +368,7 @@ class ProfessionalProfileScreen extends StatelessWidget {
                     text: "The service was outstanding! The provider was professional, arrived on time, and completed the job perfectly.",
                     fontSize: 12.w,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                     bottom: 20.h,
                     textAlign: TextAlign.start,
                     maxLines: 3,
@@ -364,7 +376,7 @@ class ProfessionalProfileScreen extends StatelessWidget {
                   ),
                   Divider(
                     thickness: 1,
-                    color: AppColors.textColor,
+                    color: AppColors.black,
                   ),
                   SizedBox(height: 10.h,),
                   Row(
