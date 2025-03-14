@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           debugShowCheckedModeBanner: false,
-          initialRoute: AppRoutes.homeUserScreen,
+          initialRoute: AppRoutes.splashScreen,
           navigatorKey: Get.key,
           getPages: AppRoutes.routes,
         ),
