@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
 import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
-
 import '../../../../components/custom_royel_appbar/custom_royel_appbar.dart';
 
 class AboutUsScreen extends StatelessWidget {

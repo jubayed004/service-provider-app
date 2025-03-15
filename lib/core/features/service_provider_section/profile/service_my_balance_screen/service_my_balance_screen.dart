@@ -15,6 +15,9 @@ class ServiceMyBalanceScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomRoyelAppbar(
         titleName: "My Balance",
+        leftIcon: true,
+        colors: AppColors.black,
+        iconColors: AppColors.black,
       ),
       body: Center(
         child: Padding(
@@ -66,14 +69,14 @@ class ServiceMyBalanceScreen extends StatelessWidget {
                              bottom: 2.h,
                            ),
                            CustomText(
-                             text: "Md. Raju",
+                             text: "Md. Tarek",
                              fontSize: 12.w,
                              fontWeight: FontWeight.w400,
                              color: AppColors.textColor,
                              bottom: 2.h,
                            ),
                            CustomText(
-                             text: "Elderly care - 13 January 2025",
+                             text: "Elderly care - 15 march 2025",
                              fontSize: 12.w,
                              fontWeight: FontWeight.w400,
                              color: AppColors.textColor,

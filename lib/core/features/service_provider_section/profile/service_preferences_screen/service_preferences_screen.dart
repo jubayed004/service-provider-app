@@ -13,6 +13,9 @@ class ServicePreferencesScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomRoyelAppbar(
         titleName: "Preferences",
+        iconColors: Colors.black,
+        colors: Colors.black,
+        leftIcon: true,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),

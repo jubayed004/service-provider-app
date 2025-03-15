@@ -40,7 +40,7 @@ class CustomReviewContainer extends StatelessWidget {
                     return Icon(
                       Icons.star,
                       color: Colors.amber,
-                      size: 15,
+                      size: 20,
                     );
                   }),
                 ),

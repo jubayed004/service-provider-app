@@ -6,7 +6,7 @@ class ServiceProfileController extends GetxController {
   final Rx<File?> selectedImage = Rx<File?>(null);
   final ImagePicker _picker = ImagePicker();
 
-// Pick an image from the gallery
+///=====================> Pick an image from the gallery <======================///
   Future<void> pickImageFromGallery() async {
     final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
     if (image != null) {
@@ -14,7 +14,7 @@ class ServiceProfileController extends GetxController {
     }
   }
 
-// Pick an image using the camera
+///=========================> Pick an image using the camera <======================///
   Future<void> pickImageFromCamera() async {
     final XFile? image = await _picker.pickImage(source: ImageSource.camera);
     if (image != null) {

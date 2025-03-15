@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:service_provider_app/core/components/custom_button/custom_button.dart';
+import 'package:service_provider_app/core/components/custom_pop_up/custom_pop_up.dart';
 import 'package:service_provider_app/core/components/custom_royel_appbar/custom_royel_appbar.dart';
 import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
 import 'package:service_provider_app/core/components/custom_text_field/custom_text_field.dart';
@@ -9,6 +10,7 @@ import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
 import 'package:service_provider_app/core/utils/app_const/app_const.dart';
 
 import '../../../../components/custom_netwrok_image/custom_network_image.dart';
+import '../../../../components/custom_pop_up/custom_pop_up.dart';
 import '../controller/service_profile_controller.dart';
 
 class ServicePersonalDetailsScreen extends StatelessWidget {
@@ -21,6 +23,9 @@ class ServicePersonalDetailsScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomRoyelAppbar(
         titleName: "Personal Details",
+        colors: AppColors.black,
+        iconColors: AppColors.black,
+        leftIcon: true,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -33,7 +38,7 @@ class ServicePersonalDetailsScreen extends StatelessWidget {
               child: Stack(
                 children: [
                   Obx(() {
-                    // Check if an image is selected, if not use the default profile image
+                    ///==============> Check if an image is selected, if not use the default profile image
                     if (serviceProfileController.selectedImage.value != null) {
                       return Container(
                         height: 120.h,
@@ -92,7 +97,8 @@ class ServicePersonalDetailsScreen extends StatelessWidget {
               height: 15.h,
             ),
             CustomTextField(
-              hintText: "Welcome to NB Sujon, where quality meets convenience! With a passion for excellence and a commitment to customer satisfaction, we specialize in delivering top-notch service.",
+              hintText:
+                  "Welcome to NB Sujon, where quality meets convenience! With a passion for excellence and a commitment to customer satisfaction, we specialize in delivering top-notch service.",
               fillColor: AppColors.fullWhite,
               maxLines: 3,
             ),
@@ -114,7 +120,9 @@ class ServicePersonalDetailsScreen extends StatelessWidget {
               height: 30.h,
             ),
             CustomButton(
-              onTap: () {},
+              onTap: () {
+                Get.back();
+              },
               title: "Save",
               fillColor: AppColors.servicePrimary,
             ),
@@ -122,7 +130,39 @@ class ServicePersonalDetailsScreen extends StatelessWidget {
               height: 30.h,
             ),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+
+                  Get.defaultDialog(
+                    titlePadding: EdgeInsets.only(top: 24),
+                      contentPadding: EdgeInsets.only(left: 20,right: 20,bottom: 24),
+                      backgroundColor: AppColors.appWhite,
+                      title: "Are you sure you want to delete ?",
+                      titleStyle: TextStyle(fontSize: 24.sp,fontWeight: FontWeight.w600),
+                      content: Column(
+                        children: [
+                          SizedBox(height: 8.h,),
+                          CustomButton(
+                            onTap: () {},
+                            title: "YES,DELETE",
+                            isBorder: true,
+                            fillColor: AppColors.servicePrimary,
+                          ),
+                          SizedBox(
+                            height: 16.h,
+                          ),
+                          CustomButton(
+                            onTap: () {
+                              Get.back();
+                            },
+                            textColor: AppColors.black,
+                            fillColor: AppColors.white,
+                            borderWidth: 1,
+                            isBorder: true,
+                            title: "NO,DON’T DELETE",
+                          )
+                        ],
+                      ));
+                },
                 child: CustomText(
                   text: "Delete Account permanently",
                   color: AppColors.textColor,

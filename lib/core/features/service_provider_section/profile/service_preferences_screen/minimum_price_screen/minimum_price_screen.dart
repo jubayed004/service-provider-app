@@ -14,7 +14,7 @@ class MinimumPriceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomRoyelAppbar(),
+      appBar: CustomRoyelAppbar(leftIcon: true,iconColors: Colors.black,),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
