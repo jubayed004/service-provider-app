@@ -10,11 +10,14 @@ class ServiceReviewsScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomRoyelAppbar(
         titleName: "Reviews",
+        leftIcon: true,
+        colors: Colors.black,
+        iconColors: Colors.black,
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 15.0),
         child: Column(
-          children: List.generate(3, (value){return CustomReviewContainer();})
+          children: List.generate(30, (value){return CustomReviewContainer(name: "Jubayed islam",);})
         ),
       ),
     );

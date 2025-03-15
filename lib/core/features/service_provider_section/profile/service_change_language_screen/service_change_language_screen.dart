@@ -11,7 +11,7 @@ class ServiceChangeLanguageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomRoyelAppbar(titleName: "Change Language",),
+      appBar: CustomRoyelAppbar(titleName: "Change Language",leftIcon: true,colors: Colors.black,iconColors: Colors.black,),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(

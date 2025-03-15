@@ -12,6 +12,9 @@ class ServiceChangePasswordScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomRoyelAppbar(
         titleName: "Change Password",
+        iconColors: Colors.black,
+        colors: Colors.black,
+        leftIcon: true,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),

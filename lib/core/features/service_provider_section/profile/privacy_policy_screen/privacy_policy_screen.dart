@@ -12,6 +12,9 @@ class PrivacyPolicyScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomRoyelAppbar(
         titleName: "Privacy Policy",
+        iconColors: Colors.black,
+        leftIcon: true,
+        colors: Colors.black,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),

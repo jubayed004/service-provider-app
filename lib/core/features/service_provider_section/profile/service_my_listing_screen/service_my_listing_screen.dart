@@ -19,6 +19,9 @@ class ServiceMyListingScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomRoyelAppbar(
         titleName: "My listing",
+        leftIcon: true,
+        iconColors: AppColors.black,
+        colors: AppColors.black,
       ),
       body: Column(
         children: [

@@ -37,10 +37,11 @@ class ServiceProfileScreen extends StatelessWidget {
                     children: [
                       CustomText(
                         maxLines: 2,
-                        text: "Mohammad Jubayed islam",
-                        fontSize: 20.w,
+                        text: "Jubayed islam",
+                        fontSize: 22.sp,
                         fontWeight: FontWeight.w600,
                         left: 10.w,
+                        overflow: TextOverflow.ellipsis,
                       ),
                       Row(
                         children: [

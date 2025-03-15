@@ -15,6 +15,9 @@ class WorkAreasMap extends StatelessWidget {
     return Scaffold(
       appBar: CustomRoyelAppbar(
         titleName: "Work areas",
+        leftIcon: true,
+        colors: Colors.black,
+        iconColors: Colors.black,
       ),
       body: SingleChildScrollView(
         child: Stack(

@@ -75,6 +75,7 @@ class CustomShowDialog extends StatelessWidget {
        // color: AppColors.green,
         borderRadius: BorderRadius.circular(16),
       ),
+      padding: EdgeInsets.only(bottom: 10.0, top: 10.h),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -97,6 +98,7 @@ class CustomShowDialog extends StatelessWidget {
             fontWeight: FontWeight.w600,
             color: textColor ?? AppColors.black_80,
             bottom: 12.h,
+            maxLines: 3,
           ),
           CustomText(
             text: "$discription",
@@ -168,7 +170,6 @@ class CustomShowDialog extends StatelessWidget {
               : SizedBox(),
         ],
       ),
-      padding: EdgeInsets.only(bottom: 10.0, top: 10.h),
     );
   }
 }

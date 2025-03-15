@@ -11,7 +11,19 @@ import 'package:service_provider_app/core/features/guest_section/guest_professio
 import 'package:service_provider_app/core/features/guest_section/guest_search_result_screen/guest_search_result_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/complete_list_screen/complete_list_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/onbroding_screen/onbroading_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/my_address_screen/my_address_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_change_language_screen/service_change_language_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_change_password_screen/service_change_password_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_my_balance_screen/service_my_balance_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_my_listing_screen/service_my_listing_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_my_listing_screen/service_palliative_care_listing/service_palliative_care_listing.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_personal_details_screen/service_personal_details_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_preferences_screen/minimum_price_screen/minimum_price_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_preferences_screen/service_preferences_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_preferences_screen/work_areas_map/work_areas_map.dart';
 import 'package:service_provider_app/core/features/service_provider_section/profile/service_profile_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_reviews_screen/service_reviews_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/terms_condition_screen/terms_condition_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/service_home/service_home.dart';
 import 'package:service_provider_app/core/features/service_provider_section/service_palliative_care/service_palliative_care.dart';
 import 'package:service_provider_app/core/features/service_provider_section/service_profile_picture_screen/service_profile_picture_screen.dart';
@@ -30,6 +42,10 @@ import 'package:service_provider_app/core/features/user_section/splash/splash_sc
 import 'package:service_provider_app/core/features/user_section/user_home/booking/booking_time_screen.dart';
 import 'package:service_provider_app/core/features/user_section/user_home/home_user_care/home_user_care_screen.dart';
 import 'package:service_provider_app/core/features/user_section/user_home/home_user_screen.dart';
+
+import '../features/user_section/profile/about_us_screen/about_us_screen.dart';
+import '../features/user_section/profile/my_address_screen/add_address_screen.dart';
+import '../features/user_section/profile/privacy_policy_screen/privacy_policy_screen.dart';
 
 ///=========================App Routes=========================
 class AppRoutes {
@@ -145,26 +161,26 @@ static List<GetPage> routes = [
       page: () => ProfessionalProfileScreen()),
   GetPage(name: confirmPayScreen, page: () => ConfirmPayScreen()),
   // GetPage(name: personalDetailsScreen, page: () => PersonalDetailsScreen()),
-  // GetPage(name: myAddressScreen, page: () => MyAddressScreen()),
-  // GetPage(name: addAddressScreen, page: () => AddAddressScreen()),
+  GetPage(name: myAddressScreen, page: () => MyAddressScreen()),
+  GetPage(name: addAddressScreen, page: () => AddAddressScreen()),
   // GetPage(name: changePasswordScreen, page: () => ChangePasswordScreen()),
-  // GetPage(name: aboutUsScreen, page: () => AboutUsScreen()),
-  // GetPage(name: privacyPolicyScreen, page: () => PrivacyPolicyScreen()),
-  // GetPage(name: termsConditionScreen, page: () => TermsConditionScreen()),
+  GetPage(name: aboutUsScreen, page: () => AboutUsScreen()),
+  GetPage(name: privacyPolicyScreen, page: () => PrivacyPolicyScreen()),
+  GetPage(name: termsConditionScreen, page: () => TermsConditionScreen()),
   // GetPage(name: changeLanguageScreen, page: () => ChangeLanguageScreen()),
   // GetPage(name: paymentRefundsScreen, page: () => PaymentRefundsScreen()),
   // GetPage(name: myBookingScreen, page: () => MyBookingScreen()),
   // GetPage(name: userChatScreen, page: () => UserChatScreen()),
   //
   // ///=========================== SERVICE PROVIDER ==========================
-  // GetPage(name: serviceCalender, page: () => ServiceCalender()),
+  //GetPage(name: serviceCalender, page: () => ServiceCalender()),
   GetPage(name: serviceProfileScreen, page: () => ServiceProfileScreen()),
-  // GetPage(
-  //     name: servicePersonalDetailsScreen,
-  //     page: () => ServicePersonalDetailsScreen()),
-  // GetPage(name: serviceMyBalanceScreen, page: () => ServiceMyBalanceScreen()),
-  // GetPage(
-  //     name: servicePreferencesScreen, page: () => ServicePreferencesScreen()),
+  GetPage(
+      name: servicePersonalDetailsScreen,
+      page: () => ServicePersonalDetailsScreen()),
+  GetPage(name: serviceMyBalanceScreen, page: () => ServiceMyBalanceScreen()),
+  GetPage(
+      name: servicePreferencesScreen, page: () => ServicePreferencesScreen()),
   // GetPage(
   //     name: completeProfessionalScreen,
   //     page: () => CompleteProfessionalScreen()),
@@ -189,13 +205,13 @@ static List<GetPage> routes = [
   GetPage(name: searchScreen, page: () => SearchScreen()),
   // GetPage(name: guestLoadingScreen, page: () => GuestLoadingScreen()),
   // GetPage(name: professionalFilterScreen, page: () => ProfessionalFilterScreen()),
-  // GetPage(name: workAreasMap, page: () => WorkAreasMap()),
-  // GetPage(name: minimumPriceScreen, page: () => MinimumPriceScreen()),
-  // GetPage(name: serviceReviewsScreen, page: () => ServiceReviewsScreen()),
-  // GetPage(name: serviceChangePasswordScreen, page: () => ServiceChangePasswordScreen()),
-  // GetPage(name: serviceChangeLanguageScreen, page: () => ServiceChangeLanguageScreen()),
-  // GetPage(name: serviceMyListingScreen, page: () => ServiceMyListingScreen()),
-  // GetPage(name: servicePalliativeCareListing, page: () => ServicePalliativeCareListing()),
+  GetPage(name: workAreasMap, page: () => WorkAreasMap()),
+  GetPage(name: minimumPriceScreen, page: () => MinimumPriceScreen()),
+  GetPage(name: serviceReviewsScreen, page: () => ServiceReviewsScreen()),
+  GetPage(name: serviceChangePasswordScreen, page: () => ServiceChangePasswordScreen()),
+  GetPage(name: serviceChangeLanguageScreen, page: () => ServiceChangeLanguageScreen()),
+  GetPage(name: serviceMyListingScreen, page: () => ServiceMyListingScreen()),
+  GetPage(name: servicePalliativeCareListing, page: () => ServicePalliativeCareListing()),
   GetPage(name: guestProfessionalProfile, page: () => GuestProfessionalProfile()),
   GetPage(name: guestSearchResultScreen, page: () => GuestSearchResultScreen()),
 
