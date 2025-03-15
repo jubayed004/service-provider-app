@@ -3,14 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:service_provider_app/core/components/custom_image/custom_image.dart';
 import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
+import 'package:service_provider_app/core/features/service_provider_section/complete_list_screen/widgets/custom_complete_card.dart';
 import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
 import 'package:service_provider_app/core/utils/app_images/app_images.dart';
-
 import '../../../../core/app_routes/app_routes.dart';
-
 import '../../../components/custom_nav_bar/service_navbar.dart';
-
 import 'controller/service_home_controller.dart';
+
 class ServiceHomeScreen extends StatelessWidget {
   ServiceHomeScreen({super.key});
 
@@ -86,43 +85,44 @@ class ServiceHomeScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 20.h,),
-                      // if(requestProController.currentIndex.value==0)
-                      //   Column(
-                      //     children: List.generate(3, (index){
-                      //       return CustomCompleteCard(
-                      //         showRowButton: true,
-                      //         onTap: (){
-                      //           Get.toNamed(AppRoutes.completeProfessionalScreen);
-                      //         },
-                      //       );
-                      //     }),
-                      //   ),
-                      // if(requestProController.currentIndex.value==1)
-                      //   Column(
-                      //     children: List.generate(3, (index){
-                      //       return CustomCompleteCard(
-                      //         singleButton: true,
-                      //         buttonName: "Ongoing",
-                      //         onTap: (){
-                      //           Get.toNamed(AppRoutes.completeProfessionalScreen);
-                      //         },
-                      //       );
-                      //     }),
-                      //   ),
-                      // if(requestProController.currentIndex.value==2)
-                      //   Column(
-                      //     children: List.generate(3, (index){
-                      //       return CustomCompleteCard(
-                      //         singleButton: true,
-                      //         backClr: AppColors.lightRed,
-                      //         backTextClr: AppColors.red,
-                      //         buttonName: "Cancel",
-                      //         onTap: (){
-                      //           Get.toNamed(AppRoutes.completeProfessionalScreen);
-                      //         },
-                      //       );
-                      //     }),
-                      //   )
+                      if(requestProController.currentIndex.value==0)
+                        Column(
+                          children: List.generate(3, (index){
+                            return CustomCompleteCard(
+                              showRowButton: true,
+                              onTap: (){
+                                Get.toNamed(AppRoutes.completeProfessionalScreen);
+                              },
+                            );
+                          }),
+                        ),
+                      if(requestProController.currentIndex.value==1)
+                        Column(
+                          children: List.generate(3, (index){
+                            return CustomCompleteCard(
+                              singleButton: true,
+                              buttonName: "Ongoing",
+                              onTap: (){
+                                Get.toNamed(AppRoutes.completeProfessionalScreen);
+                              },
+                            );
+                          }),
+                        ),
+                      if(requestProController.currentIndex.value==2)
+                        Column(
+                          children: List.generate(3, (index){
+                            return CustomCompleteCard(
+                              showPrice: true,
+                              singleButton: true,
+                              backClr: AppColors.lightRed,
+                              backTextClr: AppColors.red,
+                              buttonName: "Cancel",
+                              onTap: (){
+                                Get.toNamed(AppRoutes.completeProfessionalScreen);
+                              },
+                            );
+                          }),
+                        )
                     ],
                   ),
                 ),

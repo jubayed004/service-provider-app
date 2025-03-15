@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:service_provider_app/core/app_routes/app_routes.dart';
+import 'package:service_provider_app/core/dependency/dependency_injection.dart';
 import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
 import 'package:service_provider_app/core/utils/app_images/app_images.dart';
 import 'package:oktoast/oktoast.dart';
@@ -17,6 +18,8 @@ void main() {
       MyApp(), // Wrap your app
    )
    );*/
+  DependencyInjection di = DependencyInjection();
+  di.dependencies();
 }
 
 class MyApp extends StatelessWidget {

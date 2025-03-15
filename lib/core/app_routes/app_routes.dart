@@ -9,6 +9,13 @@ import 'package:service_provider_app/core/features/guest_section/guest_home_scre
 import 'package:service_provider_app/core/features/guest_section/guest_onbroding_screen/guest_onbroding_screen.dart';
 import 'package:service_provider_app/core/features/guest_section/guest_professional_profile/guest_professional_profile.dart';
 import 'package:service_provider_app/core/features/guest_section/guest_search_result_screen/guest_search_result_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/complete_list_screen/complete_list_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/onbroding_screen/onbroading_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/profile/service_profile_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/service_home/service_home.dart';
+import 'package:service_provider_app/core/features/service_provider_section/service_palliative_care/service_palliative_care.dart';
+import 'package:service_provider_app/core/features/service_provider_section/service_profile_picture_screen/service_profile_picture_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/work_schedule_screen/work_schedule_screen.dart';
 
 import 'package:service_provider_app/core/features/user_section/auth/create_account/create_account_screen.dart';
 import 'package:service_provider_app/core/features/user_section/inbox/inbox_screen.dart';
@@ -151,7 +158,7 @@ static List<GetPage> routes = [
   //
   // ///=========================== SERVICE PROVIDER ==========================
   // GetPage(name: serviceCalender, page: () => ServiceCalender()),
-  // GetPage(name: serviceProfileScreen, page: () => ServiceProfileScreen()),
+  GetPage(name: serviceProfileScreen, page: () => ServiceProfileScreen()),
   // GetPage(
   //     name: servicePersonalDetailsScreen,
   //     page: () => ServicePersonalDetailsScreen()),
@@ -161,18 +168,18 @@ static List<GetPage> routes = [
   // GetPage(
   //     name: completeProfessionalScreen,
   //     page: () => CompleteProfessionalScreen()),
-  // GetPage(name: serviceHomeScreen, page: () => ServiceHomeScreen()),
-  // GetPage(name: completeListScreen, page: () => CompleteListScreen()),
+  GetPage(name: serviceHomeScreen, page: () => ServiceHomeScreen()),
+  GetPage(name: completeListScreen, page: () => CompleteListScreen()),
   // GetPage(name: inboxUserScreen, page: () => InboxUserScreen()),
   // GetPage(
   //     name: serviceNotificationScreen,
   //     page: () => ServiceNotificationScreen()),
   // GetPage(name: serviceChatBubble, page: () => ServiceChatBubble()),
   // GetPage(name: selectedScreen, page: () => SelectedScreen()),
-  // GetPage(name: onbroadingScreen, page: () => OnbroadingScreen()),
-  // GetPage(name: workScheduleScreen, page: () => WorkScheduleScreen()),
-  // GetPage(name: servicePalliativeCare, page: () => ServicePalliativeCare()),
-  // GetPage(name: serviceProfilePictureScreen, page: () => ServiceProfilePictureScreen()),
+  GetPage(name: onbroadingScreen, page: () => OnbroadingScreen()),
+  GetPage(name: workScheduleScreen, page: () => WorkScheduleScreen()),
+  GetPage(name: servicePalliativeCare, page: () => ServicePalliativeCare()),
+   GetPage(name: serviceProfilePictureScreen, page: () => ServiceProfilePictureScreen()),
   GetPage(name: guestOnbrodingScreen, page: () => GuestOnbrodingScreen()),
   GetPage(name: guestHomeScreen, page: () => GuestHomeScreen()),
   GetPage(name: guestServiceScreen, page: () => GuestServiceScreen()),
