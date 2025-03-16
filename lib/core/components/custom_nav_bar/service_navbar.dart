@@ -8,6 +8,8 @@ import 'package:get/get.dart';
 import 'package:service_provider_app/core/app_routes/app_routes.dart';
 import 'package:service_provider_app/core/components/custom_image/custom_image.dart';
 import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
+import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/inbox_user_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/notification/notification_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/profile/service_profile_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/service_home/service_home.dart';
 import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
@@ -191,13 +193,13 @@ class _UserNavBarState extends State<ServiceNavbar> {
           // Get.offAll(() => ServiceCalender());
           break;
         case 1:
-          // Get.to(() => InboxUserScreen());
+          Get.to(() => InboxUserScreen());
           break;
         case 2:
           Get.to(() => ServiceHomeScreen());
           break;
         case 3:
-          // Get.to(() => ServiceNotificationScreen());
+          Get.to(() => ServiceNotificationScreen());
           break;
         case 4:
           Get.to(() => ServiceProfileScreen());

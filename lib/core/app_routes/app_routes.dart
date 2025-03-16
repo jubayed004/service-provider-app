@@ -10,6 +10,10 @@ import 'package:service_provider_app/core/features/guest_section/guest_onbroding
 import 'package:service_provider_app/core/features/guest_section/guest_professional_profile/guest_professional_profile.dart';
 import 'package:service_provider_app/core/features/guest_section/guest_search_result_screen/guest_search_result_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/complete_list_screen/complete_list_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/complete_professional_screen/complete_professional_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/inbox_user_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/service_chat_bubbile/service_chat_bubble.dart';
+import 'package:service_provider_app/core/features/service_provider_section/notification/notification_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/onbroding_screen/onbroading_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/profile/my_address_screen/my_address_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/profile/service_change_language_screen/service_change_language_screen.dart';
@@ -156,9 +160,7 @@ static List<GetPage> routes = [
   // GetPage(name: bookingTime, page: () => BookingTime()),
   GetPage(name: searchResultScreen, page: () => SearchResultScreen()),
   GetPage(name: palliativeCareScreen, page: () => PalliativeCareScreen()),
-  GetPage(
-      name: professionalProfileScreen,
-      page: () => ProfessionalProfileScreen()),
+  GetPage(name: professionalProfileScreen, page: () => ProfessionalProfileScreen()),
   GetPage(name: confirmPayScreen, page: () => ConfirmPayScreen()),
   // GetPage(name: personalDetailsScreen, page: () => PersonalDetailsScreen()),
   GetPage(name: myAddressScreen, page: () => MyAddressScreen()),
@@ -175,27 +177,20 @@ static List<GetPage> routes = [
   // ///=========================== SERVICE PROVIDER ==========================
   //GetPage(name: serviceCalender, page: () => ServiceCalender()),
   GetPage(name: serviceProfileScreen, page: () => ServiceProfileScreen()),
-  GetPage(
-      name: servicePersonalDetailsScreen,
-      page: () => ServicePersonalDetailsScreen()),
+  GetPage(name: servicePersonalDetailsScreen, page: () => ServicePersonalDetailsScreen()),
   GetPage(name: serviceMyBalanceScreen, page: () => ServiceMyBalanceScreen()),
-  GetPage(
-      name: servicePreferencesScreen, page: () => ServicePreferencesScreen()),
-  // GetPage(
-  //     name: completeProfessionalScreen,
-  //     page: () => CompleteProfessionalScreen()),
+  GetPage(name: servicePreferencesScreen, page: () => ServicePreferencesScreen()),
+  GetPage(name: completeProfessionalScreen, page: () => CompleteProfessionalScreen()),
   GetPage(name: serviceHomeScreen, page: () => ServiceHomeScreen()),
   GetPage(name: completeListScreen, page: () => CompleteListScreen()),
-  // GetPage(name: inboxUserScreen, page: () => InboxUserScreen()),
-  // GetPage(
-  //     name: serviceNotificationScreen,
-  //     page: () => ServiceNotificationScreen()),
-  // GetPage(name: serviceChatBubble, page: () => ServiceChatBubble()),
+  GetPage(name: inboxUserScreen, page: () => InboxUserScreen()),
+  GetPage(name: serviceNotificationScreen, page: () => ServiceNotificationScreen()),
+  GetPage(name: serviceChatBubble, page: () => ServiceChatBubble()),
   // GetPage(name: selectedScreen, page: () => SelectedScreen()),
   GetPage(name: onbroadingScreen, page: () => OnbroadingScreen()),
   GetPage(name: workScheduleScreen, page: () => WorkScheduleScreen()),
   GetPage(name: servicePalliativeCare, page: () => ServicePalliativeCare()),
-   GetPage(name: serviceProfilePictureScreen, page: () => ServiceProfilePictureScreen()),
+  GetPage(name: serviceProfilePictureScreen, page: () => ServiceProfilePictureScreen()),
   GetPage(name: guestOnbrodingScreen, page: () => GuestOnbrodingScreen()),
   GetPage(name: guestHomeScreen, page: () => GuestHomeScreen()),
   GetPage(name: guestServiceScreen, page: () => GuestServiceScreen()),
