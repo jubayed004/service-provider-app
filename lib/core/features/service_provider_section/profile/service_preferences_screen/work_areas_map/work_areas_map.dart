@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:service_provider_app/core/components/custom_button/custom_button.dart';
 import 'package:service_provider_app/core/components/custom_image/custom_image.dart';
 import 'package:service_provider_app/core/components/custom_royel_appbar/custom_royel_appbar.dart';
