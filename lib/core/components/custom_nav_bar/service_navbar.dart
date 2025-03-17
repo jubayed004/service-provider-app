@@ -11,6 +11,7 @@ import 'package:service_provider_app/core/components/custom_text/custom_text.dar
 import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/inbox_user_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/notification/notification_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/profile/service_profile_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/service_calender/service_calender.dart';
 import 'package:service_provider_app/core/features/service_provider_section/service_home/service_home.dart';
 import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
 import 'package:service_provider_app/core/utils/app_images/app_images.dart';
@@ -190,7 +191,7 @@ class _UserNavBarState extends State<ServiceNavbar> {
     if (index != bottomNavIndex) {
       switch (index) {
         case 0:
-          // Get.offAll(() => ServiceCalender());
+          Get.offAll(() => ServiceCalender());
           break;
         case 1:
           Get.to(() => InboxUserScreen());

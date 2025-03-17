@@ -1,5 +1,6 @@
 
 import 'package:get/get.dart';
+import 'package:service_provider_app/core/features/service_provider_section/controller/service_controller.dart';
 import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/controller/service_message_controller.dart';
 import 'package:service_provider_app/core/features/service_provider_section/notification/controller/notification_controller.dart';
 import 'package:service_provider_app/core/features/service_provider_section/profile/controller/service_profile_controller.dart';
@@ -18,8 +19,8 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => ServiceHomeController(), fenix: true);
     Get.lazyPut(() => ServiceNotificationController(), fenix: true);
     Get.lazyPut(() => ServiceMessageController(), fenix: true);
-    // Get.lazyPut(() => UserMessageController(), fenix: true);
-    // Get.lazyPut(() => ServiceController(), fenix: true);
+   // Get.lazyPut(() => UserMessageController(), fenix: true);
+    Get.lazyPut(() => ServiceController(), fenix: true);
 
 
 
