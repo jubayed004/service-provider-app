@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           debugShowCheckedModeBanner: false,
-          initialRoute: AppRoutes.splashScreen,
+          initialRoute: AppRoutes.alarmScreen,
           navigatorKey: Get.key,
           getPages: AppRoutes.routes,
         ),

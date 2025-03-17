@@ -47,6 +47,7 @@ import 'package:service_provider_app/core/features/user_section/splash/splash_sc
 import 'package:service_provider_app/core/features/user_section/user_home/booking/booking_time_screen.dart';
 import 'package:service_provider_app/core/features/user_section/user_home/home_user_care/home_user_care_screen.dart';
 import 'package:service_provider_app/core/features/user_section/user_home/home_user_screen.dart';
+import 'package:service_provider_app/my_test_screen.dart';
 
 import '../features/user_section/profile/about_us_screen/about_us_screen.dart';
 import '../features/user_section/profile/my_address_screen/add_address_screen.dart';
@@ -132,6 +133,7 @@ class AppRoutes {
   static const String servicePalliativeCareListing = "/ServicePalliativeCareListing";
   static const String guestProfessionalProfile = "/GuestProfessionalProfile";
   static const String guestSearchResultScreen = "/GuestSearchResultScreen";
+  static const String alarmScreen = "/AlarmScreen";
 
 static List<GetPage> routes = [
 
@@ -146,6 +148,7 @@ static List<GetPage> routes = [
   GetPage(name: palliativeCareScreen, page: () => PalliativeCareScreen()),
   GetPage(name: searchResultScreen, page: () => SearchResultScreen()),
   GetPage(name: professionalProfileScreen, page: () => ProfessionalProfileScreen()),
+  // GetPage(name: alarmScreen, page: () => AlarmScreen()),
 
 
 
