@@ -28,6 +28,7 @@ import 'package:service_provider_app/core/features/service_provider_section/prof
 import 'package:service_provider_app/core/features/service_provider_section/profile/service_profile_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/profile/service_reviews_screen/service_reviews_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/profile/terms_condition_screen/terms_condition_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/service_calender/service_calender.dart';
 import 'package:service_provider_app/core/features/service_provider_section/service_home/service_home.dart';
 import 'package:service_provider_app/core/features/service_provider_section/service_palliative_care/service_palliative_care.dart';
 import 'package:service_provider_app/core/features/service_provider_section/service_profile_picture_screen/service_profile_picture_screen.dart';
@@ -175,7 +176,7 @@ static List<GetPage> routes = [
   // GetPage(name: userChatScreen, page: () => UserChatScreen()),
   //
   // ///=========================== SERVICE PROVIDER ==========================
-  //GetPage(name: serviceCalender, page: () => ServiceCalender()),
+  GetPage(name: serviceCalender, page: () => ServiceCalender()),
   GetPage(name: serviceProfileScreen, page: () => ServiceProfileScreen()),
   GetPage(name: servicePersonalDetailsScreen, page: () => ServicePersonalDetailsScreen()),
   GetPage(name: serviceMyBalanceScreen, page: () => ServiceMyBalanceScreen()),
