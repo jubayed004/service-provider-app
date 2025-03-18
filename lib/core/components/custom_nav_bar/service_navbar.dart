@@ -31,24 +31,24 @@ class _UserNavBarState extends State<ServiceNavbar> {
 
   final List<String> selectedIcon = [
     AppImages.selectedService,
+    AppImages.chatIconBlue,
     AppImages.selectedLove,
-    AppImages.selectedLove,
-    AppImages.selectedInbox,
+    AppImages.selectedAlart,
     AppImages.selectedProfile,
   ];
   final List<String> unselectedIcon = [
     AppImages.unselectedService,
-    AppImages.unselectedLove,
-    AppImages.unselectedLove,
     AppImages.unselectedInbox,
+    AppImages.unselectedLove,
+    AppImages.unselectedAlart,
     AppImages.unselectedProfile,
   ];
 
   final List<String> userNavText = [
-    AppStrings.service,
-    AppStrings.favourites,
-    AppStrings.favourites,
+    AppStrings.calendar,
     AppStrings.inbox,
+    AppStrings.notification,
+    AppStrings.notification,
     AppStrings.profile,
   ];
 

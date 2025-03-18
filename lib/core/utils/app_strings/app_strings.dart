@@ -102,6 +102,8 @@ class   AppStrings {
   static const String skip   = "Skip";
   static const String search   = "Search";
   static const String dayOfTheWeek   = "Day(s) of the week";
+  static const String calendar   = "Calendar";
+  static const String notification   = "Notification";
 
 
 

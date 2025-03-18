@@ -105,6 +105,7 @@ class AppImages {
   static const String chosseServiceProvider =
       "$basePath/chosseServiceProvider.png";
   static const String chosseService = "$basePath/chosseService.png";
+  static const String chooseOption = "$basePath/choose_option_logo.svg";
   static const String badgeCheck = "$basePath/badge_check.svg";
   static const String chatIcon = "$basePath/chatIcon.svg";
   static const String verifai = "$basePath/verifai.svg";
