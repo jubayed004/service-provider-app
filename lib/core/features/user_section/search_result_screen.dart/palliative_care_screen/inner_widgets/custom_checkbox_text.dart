@@ -4,7 +4,8 @@ import 'package:service_provider_app/core/components/custom_text/custom_text.dar
 import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
 
 class CustomCheckboxText extends StatelessWidget {
-  const CustomCheckboxText({super.key});
+  String? text;
+   CustomCheckboxText({super.key, this.text});
 
   @override
   Widget build(BuildContext context) {

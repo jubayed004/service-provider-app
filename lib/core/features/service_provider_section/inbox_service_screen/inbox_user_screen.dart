@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:service_provider_app/core/app_routes/app_routes.dart';
+import 'package:service_provider_app/core/components/custom_button/custom_button.dart';
+import 'package:service_provider_app/core/components/custom_image/custom_image.dart';
 import 'package:service_provider_app/core/components/custom_nav_bar/service_navbar.dart';
 import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
 import 'package:service_provider_app/core/components/custom_text_field/custom_text_field.dart';
 import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/inner_widget/history_card.dart';
 import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/inner_widget/inbox_card.dart';
 import 'package:service_provider_app/core/utils/app_colors/app_colors.dart';
+import 'package:service_provider_app/core/utils/app_const/app_const.dart';
+import 'package:service_provider_app/core/utils/app_images/app_images.dart';
+import 'package:service_provider_app/core/utils/app_strings/app_strings.dart';
 import '../../../components/custom_tab_selected/custom_tab_bar.dart';
 import '../service_home/controller/service_home_controller.dart';
 
@@ -42,7 +47,7 @@ class _InboxUserScreenState extends State<InboxUserScreen> {
                     bottom: 9.h,
                     right: 15,
                   ),
-          /*        if (!requestProController.showSearchField.value &&
+                  /*        if (!requestProController.showSearchField.value &&
                       requestProController.currentIndex.value ==
                           0) // Hide search icon when search field is visible
                     IconButton(
@@ -80,7 +85,7 @@ class _InboxUserScreenState extends State<InboxUserScreen> {
                       ),
                     ),
                 ],*/
-             ],
+                ],
               ),
               SizedBox(
                 height: 15,
@@ -96,27 +101,41 @@ class _InboxUserScreenState extends State<InboxUserScreen> {
                 unselectedColor: AppColors.black,
               ),
               SizedBox(height: 20.h),
-              //======================================= Inbox Section ============================
 
+              ///======================================= Inbox Section ============================///
+              CustomTextField(
+                fillColor: AppColors.fullWhite,
+                hintText: "Search friends",
+                suffixIcon: Icon(Icons.search),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
               if (requestProController.currentIndex.value == 0)
-
-                Column(
-                  children: [
-                    CustomTextField(
-                      fillColor: AppColors.fullWhite,
-                      hintText: "Search friends",
-                      suffixIcon: Icon(Icons.search),
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        ListView.builder(
+                          padding: EdgeInsets.zero,
+                          itemCount: 10,
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemBuilder: (context, index) {
+                            return InboxCard(
+                              onTap: () {
+                                Get.toNamed(AppRoutes.serviceChatBubble);
+                              },
+                            );
+                          },
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 10.h,),
-                    InboxCard(
-                      onTap: () {
-                        Get.toNamed(AppRoutes.serviceChatBubble);
-                      },
-                    ),
-                  ],
+                  ),
                 ),
-//============================== History ===================================
-                if(requestProController.currentIndex.value == 1)
+
+              ///============================== History ===================================///
+              if (requestProController.currentIndex.value == 1)
                 Expanded(
                   child: ListView.builder(
                     padding: EdgeInsets.zero,
@@ -131,7 +150,112 @@ class _InboxUserScreenState extends State<InboxUserScreen> {
           );
         }),
       ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 24.0),
+        child: requestProController.currentIndex.value == 0
+            ? SizedBox(
+                width: 100,
+                height: 40,
+                child: FloatingActionButton(
+                  backgroundColor: AppColors.blue,
+                  onPressed: () {
+                    _showMyDialog(context);
+                  },
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.headset_mic,
+                        color: AppColors.white,
+                      ),
+                      CustomText(
+                        text: "Support",
+                        color: AppColors.white,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            : SizedBox(),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       bottomNavigationBar: ServiceNavbar(currentIndex: 1),
     );
   }
+}
+
+Future<void> _showMyDialog(BuildContext context) async {
+  return showDialog<void>(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        backgroundColor: AppColors.white,
+        content: Column(
+          mainAxisSize:
+              MainAxisSize.min, // Ensure the dialog takes minimal space
+          children: [
+            Align(
+              alignment: Alignment.bottomRight,
+                child: IconButton(
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: Icon(
+                      Icons.close,
+                      color: AppColors.black,
+                    ))),
+            // Top section: Image
+            CustomImage(imageSrc: AppImages.chooseOption),
+            SizedBox(height: 16), // Spacing between text and buttons
+            // Bottom section: Vertical buttons
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: AppColors.blue),
+              onPressed: () {
+               Get.toNamed(AppRoutes.upcomingAudioCallScreen);
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.phone_forwarded,
+                    color: AppColors.white,
+                  ),
+                  CustomText(
+                    text: "Call",
+                    color: AppColors.white,
+                    left: 8,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 8), // Spacing between buttons
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: AppColors.blue),
+              onPressed: () {
+                // Action for the second button
+                Navigator.of(context).pop();
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.chat,
+                    color: AppColors.white,
+                  ),
+                  CustomText(
+                    text: "Massage",
+                    color: AppColors.white,
+                    left: 8,
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    },
+  );
 }

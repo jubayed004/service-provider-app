@@ -13,6 +13,8 @@ import 'package:service_provider_app/core/features/service_provider_section/comp
 import 'package:service_provider_app/core/features/service_provider_section/complete_professional_screen/complete_professional_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/inbox_user_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/service_chat_bubbile/service_chat_bubble.dart';
+import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/upcoming_audio_call/calling_screen.dart';
+import 'package:service_provider_app/core/features/service_provider_section/inbox_service_screen/upcoming_audio_call/upcoming_audio_call_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/notification/notification_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/onbroding_screen/onbroading_screen.dart';
 import 'package:service_provider_app/core/features/service_provider_section/profile/my_address_screen/my_address_screen.dart';
@@ -134,6 +136,8 @@ class AppRoutes {
   static const String guestProfessionalProfile = "/GuestProfessionalProfile";
   static const String guestSearchResultScreen = "/GuestSearchResultScreen";
   static const String alarmScreen = "/AlarmScreen";
+  static const String upcomingAudioCallScreen = "/UpcomingAudioCallScreen";
+  static const String callingScreen = "/CallingScreen";
 
 static List<GetPage> routes = [
 
@@ -213,6 +217,8 @@ static List<GetPage> routes = [
   GetPage(name: servicePalliativeCareListing, page: () => ServicePalliativeCareListing()),
   GetPage(name: guestProfessionalProfile, page: () => GuestProfessionalProfile()),
   GetPage(name: guestSearchResultScreen, page: () => GuestSearchResultScreen()),
+  GetPage(name: upcomingAudioCallScreen, page: () => UpcomingAudioCallScreen()),
+  GetPage(name: callingScreen, page: () => CallingScreen()),
 
 ];
 }
