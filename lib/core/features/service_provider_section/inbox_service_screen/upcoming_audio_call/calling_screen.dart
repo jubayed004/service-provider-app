@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:service_provider_app/core/app_routes/app_routes.dart';
 import 'package:service_provider_app/core/components/custom_image/custom_image.dart';
 import 'package:service_provider_app/core/components/custom_royel_appbar/custom_royel_appbar.dart';
 import 'package:service_provider_app/core/components/custom_text/custom_text.dart';
 import 'package:service_provider_app/core/utils/app_images/app_images.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 class CallingScreen extends StatefulWidget {
   const CallingScreen({super.key});
 
@@ -38,6 +40,7 @@ class _CallingScreenState extends State<CallingScreen> {
                   )),
             ),
             CustomText(
+              color: Colors.blue,
               text: "Jubayed islam",
               textAlign: TextAlign.center,
               top: 20,
@@ -58,34 +61,36 @@ class _CallingScreenState extends State<CallingScreen> {
               children: [
               Column(
                 children: [
-                  IconButton(onPressed: (){}, icon: Icon(Icons.mic_off_rounded)),
+                  IconButton(onPressed: (){}, icon: Icon(Icons.mic_off_rounded,color: Colors.blue)),
                   CustomText(text: "Mute")
                 ],
               ),
-                SizedBox(width: 10,),
+                SizedBox(width: 20,),
               Column(
                 children: [
-                  IconButton(onPressed: (){}, icon: Icon(Icons.mic_off_rounded)),
-                  CustomText(text: "Mute")
+                  IconButton(onPressed: (){}, icon: Icon(Icons.volume_up,color: Colors.blue)),
+                  CustomText(text: "Speaker")
                 ],
               ),
-                SizedBox(width: 10,),
+                SizedBox(width: 20,),
               Column(
                 children: [
-                  IconButton(onPressed: (){}, icon: Icon(Icons.mic_off_rounded)),
-                  CustomText(text: "Mute")
+                  IconButton(onPressed: (){}, icon: Icon(Icons.video_call,color: Colors.blue,)),
+                  CustomText(text: "video call")
                 ],
               ),
-                SizedBox(width: 10,),
+                SizedBox(width: 20,),
 
             ],
             ),
-            SizedBox(height: 200,),
+            SizedBox(height: 150,),
             Center(
               child: CircleAvatar(
                 radius: 25,
                 backgroundColor: Colors.red,
-                child: IconButton(onPressed: () {}, icon: Icon(Icons.call_end,color: Colors.white,)),
+                child: IconButton(onPressed: () {
+                  Get.offAllNamed(AppRoutes.serviceChatBubble);
+                }, icon: Icon(Icons.call_end,color: Colors.white,)),
               ),
             ),
 

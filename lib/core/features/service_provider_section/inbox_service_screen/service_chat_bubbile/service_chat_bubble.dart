@@ -179,14 +179,18 @@ class _ServiceChatBubble extends State<ServiceChatBubble> {
         actions: [
           IconButton(
             icon: CustomImage(imageSrc: AppImages.videoIcon),
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(AppRoutes.upcomingVideoCall);
+            },
           ),
           IconButton(
             icon: Icon(
               Icons.call,
               color: AppColors.blue,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(AppRoutes.upcomingAudioCallScreen);
+            },
           ),
           IconButton(
             icon: Icon(

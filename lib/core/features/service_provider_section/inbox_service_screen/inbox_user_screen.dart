@@ -235,8 +235,7 @@ Future<void> _showMyDialog(BuildContext context) async {
             ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: AppColors.blue),
               onPressed: () {
-                // Action for the second button
-                Navigator.of(context).pop();
+                Get.toNamed(AppRoutes.serviceChatBubble);
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
