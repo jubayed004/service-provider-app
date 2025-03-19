@@ -102,8 +102,7 @@ class AppImages {
   static const String onbroadingOne = "$basePath/onbroadingOne.png";
   static const String onbroadingThree = "$basePath/onbroadingThree.png";
   static const String onnroadingTwo = "$basePath/onnroadingTwo.png";
-  static const String chosseServiceProvider =
-      "$basePath/chosseServiceProvider.png";
+  static const String chosseServiceProvider = "$basePath/chosseServiceProvider.png";
   static const String chosseService = "$basePath/chosseService.png";
   static const String chooseOption = "$basePath/choose_option_logo.svg";
   static const String badgeCheck = "$basePath/badge_check.svg";
@@ -171,6 +170,8 @@ class AppImages {
   static const String adjustments = "$basePath/adjustments.svg";
   static const String currencyDollar = "$basePath/currencyDollar.svg";
   static const String mapImage = "$basePath/mapImage.png";
+  static const String vedioImage = "$basePath/vedioImage.png";
+  static const String rajuBro = "$basePath/rajubro.png";
 
 
 

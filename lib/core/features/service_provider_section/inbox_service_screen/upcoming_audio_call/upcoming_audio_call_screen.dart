@@ -60,7 +60,9 @@ class _UpcomingAudioCallScreenState extends State<UpcomingAudioCallScreen> {
                 CircleAvatar(
                   radius: 25,
                   backgroundColor: Colors.red,
-                  child: IconButton(onPressed: () {}, icon: Icon(Icons.call_end,color: Colors.white,)),
+                  child: IconButton(onPressed: () {
+                    Get.back();
+                  }, icon: Icon(Icons.call_end,color: Colors.white,)),
                 ),
                 SizedBox(width: 140,),
                 CircleAvatar(
